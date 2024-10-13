@@ -29,7 +29,7 @@ def get_password(e: Event | None = None):
         except IndexError:
             password.set("Tick at least one of the options!")
             return
-        if to_add == "letters": Password = f"{Password}{choice(list(string.ascii_letters))}"
+        if to_add == "letters": Password = f"{Password}{choice(list(string.ascii_uppercase))}"
         elif to_add == "lowercase letters": Password = f"{Password}{choice(list(string.ascii_lowercase))}"
         elif to_add == "numbers": Password = f"{Password}{choice(range(0, 9))}"
         elif to_add == "symbols": Password = f"{Password}{choice(list(string.punctuation))}"
